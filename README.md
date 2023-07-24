@@ -24,30 +24,38 @@ limitations under the License.
 
 > Test if a value is a [64-bit][@stdlib/complex/float32] or [128-bit][@stdlib/complex/float64] complex number.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/assert-is-complex
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var isComplex = require( '@stdlib/assert-is-complex' );
+isComplex = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var isComplex = require( 'path/to/vendor/umd/assert-is-complex/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.isComplex;
+})();
+</script>
 ```
 
 #### isComplex( value )
@@ -77,10 +85,15 @@ bool = isComplex( x );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var Complex64 = require( '@stdlib/complex-float32' );
-var Complex128 = require( '@stdlib/complex-float64' );
-var isComplex = require( '@stdlib/assert-is-complex' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var out = isComplex( new Complex64( 2.0, 2.0 ) );
 // returns true
@@ -93,6 +106,11 @@ out = isComplex( {} );
 
 out = isComplex( null );
 // returns false
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -183,15 +201,15 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/assert-is-complex/main/LICENSE
 
-[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64
+[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64/tree/umd
 
-[@stdlib/complex/float32]: https://github.com/stdlib-js/complex-float32
+[@stdlib/complex/float32]: https://github.com/stdlib-js/complex-float32/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/assert/is-complex64]: https://github.com/stdlib-js/assert-is-complex64
+[@stdlib/assert/is-complex64]: https://github.com/stdlib-js/assert-is-complex64/tree/umd
 
-[@stdlib/assert/is-complex128]: https://github.com/stdlib-js/assert-is-complex128
+[@stdlib/assert/is-complex128]: https://github.com/stdlib-js/assert-is-complex128/tree/umd
 
 <!-- </related-links> -->
 
