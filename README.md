@@ -18,20 +18,47 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # isComplex
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Test if a value is a [64-bit][@stdlib/complex/float32] or [128-bit][@stdlib/complex/float64] complex number.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/assert-is-complex
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import isComplex from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@deno/mod.js';
+var isComplex = require( '@stdlib/assert-is-complex' );
 ```
 
 #### isComplex( value )
@@ -39,8 +66,8 @@ import isComplex from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@d
 Tests if a value is a [64-bit][@stdlib/complex/float32] or [128-bit][@stdlib/complex/float64] complex number.
 
 ```javascript
-import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@deno/mod.js';
-import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
+var Complex128 = require( '@stdlib/complex-float64' );
+var Complex64 = require( '@stdlib/complex-float32' );
 
 var x = new Complex128( 1.0, 3.0 );
 var bool = isComplex( x );
@@ -62,9 +89,9 @@ bool = isComplex( x );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
-import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@deno/mod.js';
-import isComplex from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@deno/mod.js';
+var Complex64 = require( '@stdlib/complex-float32' );
+var Complex128 = require( '@stdlib/complex-float64' );
+var isComplex = require( '@stdlib/assert-is-complex' );
 
 var out = isComplex( new Complex64( 2.0, 2.0 ) );
 // returns true
@@ -107,7 +134,7 @@ out = isComplex( null );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -137,8 +164,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-complex.svg
 [npm-url]: https://npmjs.org/package/@stdlib/assert-is-complex
 
-[test-image]: https://github.com/stdlib-js/assert-is-complex/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/assert-is-complex/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/assert-is-complex/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/assert-is-complex/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/assert-is-complex/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/assert-is-complex?branch=main
@@ -167,15 +194,15 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/assert-is-complex/main/LICENSE
 
-[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64/tree/deno
+[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64
 
-[@stdlib/complex/float32]: https://github.com/stdlib-js/complex-float32/tree/deno
+[@stdlib/complex/float32]: https://github.com/stdlib-js/complex-float32
 
 <!-- <related-links> -->
 
-[@stdlib/assert/is-complex64]: https://github.com/stdlib-js/assert-is-complex64/tree/deno
+[@stdlib/assert/is-complex64]: https://github.com/stdlib-js/assert-is-complex64
 
-[@stdlib/assert/is-complex128]: https://github.com/stdlib-js/assert-is-complex128/tree/deno
+[@stdlib/assert/is-complex128]: https://github.com/stdlib-js/assert-is-complex128
 
 <!-- </related-links> -->
 
