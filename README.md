@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import isComplex from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/assert-is-complex/tags). For example,
+
+```javascript
 import isComplex from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@v0.1.0-esm/index.mjs';
 ```
 
@@ -80,7 +85,7 @@ bool = isComplex( x );
 
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@esm/index.mjs';
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
-import isComplex from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@v0.1.0-esm/index.mjs';
+import isComplex from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@esm/index.mjs';
 
 var out = isComplex( new Complex64( 2.0, 2.0 ) );
 // returns true
