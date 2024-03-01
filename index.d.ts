@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,22 +16,17 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var Complex128 = require( '@stdlib/complex-float64' );
-var Complex64 = require( '@stdlib/complex-float32' );
-var constructorName = require( '@stdlib/utils-constructor-name' );
-
-
-// MAIN //
+import { Complex128, Complex64 } from '@stdlib/types/complex';
 
 /**
 * Tests if a value is a 64-bit or 128-bit complex number.
 *
-* @param {*} value - value to test
-* @returns {boolean} boolean indicating if a value is a 64-bit or 128-bit complex number
+* @param value - value to test
+* @returns boolean indicating if a value is a 64-bit or 128-bit complex number
 *
 * @example
 * var Complex128 = require( '@stdlib/complex-float64' );
@@ -45,16 +40,9 @@ var constructorName = require( '@stdlib/utils-constructor-name' );
 * bool = isComplex( x );
 * // returns true
 */
-function isComplex( value ) {
-	var type;
-	if ( value instanceof Complex128 || value instanceof Complex64 ) {
-		return true;
-	}
-	type = constructorName( value );
-	return ( type === 'Complex64' || type === 'Complex128' );
-}
+declare function isComplex( value: any ): value is Complex128 | Complex64;
 
 
 // EXPORTS //
 
-module.exports = isComplex;
+export = isComplex;
