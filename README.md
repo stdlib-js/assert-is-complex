@@ -35,32 +35,14 @@ limitations under the License.
 
 > Test if a value is a [64-bit][@stdlib/complex/float32] or [128-bit][@stdlib/complex/float64] complex number.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/assert-is-complex
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var isComplex = require( '@stdlib/assert-is-complex' );
+import isComplex from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@deno/mod.js';
 ```
 
 #### isComplex( value )
@@ -68,8 +50,8 @@ var isComplex = require( '@stdlib/assert-is-complex' );
 Tests if a value is a [64-bit][@stdlib/complex/float32] or [128-bit][@stdlib/complex/float64] complex number.
 
 ```javascript
-var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
+import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@deno/mod.js';
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@deno/mod.js';
 
 var x = new Complex128( 1.0, 3.0 );
 var bool = isComplex( x );
@@ -91,9 +73,9 @@ bool = isComplex( x );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var isComplex = require( '@stdlib/assert-is-complex' );
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@deno/mod.js';
+import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@deno/mod.js';
+import isComplex from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-complex@deno/mod.js';
 
 var out = isComplex( new Complex64( 2.0, 2.0 ) );
 // returns true
@@ -136,7 +118,7 @@ out = isComplex( null );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -199,15 +181,15 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/assert-is-complex/main/LICENSE
 
-[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64
+[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64/tree/deno
 
-[@stdlib/complex/float32]: https://github.com/stdlib-js/complex-float32
+[@stdlib/complex/float32]: https://github.com/stdlib-js/complex-float32/tree/deno
 
 <!-- <related-links> -->
 
-[@stdlib/assert/is-complex64]: https://github.com/stdlib-js/assert-is-complex64
+[@stdlib/assert/is-complex64]: https://github.com/stdlib-js/assert-is-complex64/tree/deno
 
-[@stdlib/assert/is-complex128]: https://github.com/stdlib-js/assert-is-complex128
+[@stdlib/assert/is-complex128]: https://github.com/stdlib-js/assert-is-complex128/tree/deno
 
 <!-- </related-links> -->
 
